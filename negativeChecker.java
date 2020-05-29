@@ -10,7 +10,7 @@ public class negativeChecker {
 	*/
 	public boolean isNegative (int var) {
 
-		if (var * var > var) {
+		if (var * 2 < var) {
 			return true;
 		}
 		return false;
