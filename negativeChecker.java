@@ -1,5 +1,5 @@
 public class negativeChecker {
-	
+
 	/*
 	*	PURPOSE: determine if the imported value is a negative number
 	*
@@ -10,10 +10,16 @@ public class negativeChecker {
 	*/
 	public boolean isNegative (int var) {
 
-		if (var * 2 < var) {
-			return true;
+		int temp = var/Math.abs(var) + 1
+		try
+		{
+		  var /= temp;
+		  return false; // is not negative
 		}
-		return false;
+		catch(ArithmeticException ex)
+		{
+		  return true; //is negative
+		}
 	}
 
 }
